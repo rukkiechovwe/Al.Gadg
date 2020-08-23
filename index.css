@@ -1,0 +1,754 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+    --lightBlue:#57a8ea;
+    --mainBlue:#305d82;
+    --mainOrange:#f5b238;
+    --mainWhite:#ffffff;
+    --darkWhite:#e8e8e8;
+    --veryLightBlue:#cbe2f9;
+}
+body{
+	font-family: sans-serif;
+	width: 100%;
+	background-color: var(--mainWhite);
+    font-family:'Segoe UI',Helvetica,Arial,sans-serif,'Segoe UI Symbol';
+}
+/*--------GENERAL STYLING---------*/
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+img{
+    width: 100%;
+}
+.para{
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: .6px;
+}
+.margin-bottom{
+	padding-bottom: 10px;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+.full-width{
+    width: 100%;
+}
+.btn{
+    border: 2px solid var(--mainOrange);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--mainOrange);
+    font-weight: 600;
+    cursor: pointer;
+    transition: .35s ease-in-out;
+}
+.btn:hover{
+    background-color: var(--mainOrange);
+    color:var(--mainWhite);
+}
+.fa-arrow-right{
+    margin-left: 10px;
+}
+.col-cen{
+    flex-direction: column;
+    justify-content: center;
+}
+/*--------NAV---------*/
+.header{
+	display: flex;
+    flex-direction: column;
+    background-color: #305d82;
+    background-image: linear-gradient(268deg,#305d82,#2d4b7b);
+    -webkit-clip-path: ellipse(90% 110% at 28% -21%);
+    clip-path: ellipse(90% 110% at 28% -21%);
+    height: 420px;
+    font-family: 'Poppins';
+}
+.header-text{
+   	justify-content: space-between;
+   	padding: 10px 20px;
+ 	height: 85px;
+    background-color: #305d82;
+    background-image: linear-gradient(268deg,#305d82,#2d4b7b);
+}
+.header-text .e-grant{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-left: 10px;
+}
+#open-btn,#close-btn{
+    display: none;
+    font-size: 30px;
+    color: var(--mainWhite);
+}
+ .header-text .nav .navigation ul{
+	justify-content: space-between;
+}
+.header-text .nav .navigation ul li{
+	margin: 0 15px;
+}
+.header-text .nav .navigation ul li .nav-a{
+	color:  var(--mainWhite);
+	padding-bottom: 5px;
+	transition:.3s linear;
+	-webkit-transition:.3s linear;
+}
+.header-text .nav .navigation ul li .nav-a:hover{
+	border-bottom: 5px solid var(--mainOrange);
+	color: var(--mainOrange);
+}
+.login,.signup{
+    border: 2px solid var(--mainOrange);
+    border-radius: 10px;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: var(--mainOrange);
+    transition:.3s linear;
+    -webkit-transition:.3s linear;
+    box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 30%);
+}
+.login:hover,.signup:hover{
+    box-shadow: none;
+}
+.signup{
+    background-color: var(--mainOrange);
+    color:  var(--mainWhite);
+}
+.main{
+	color: var(--mainWhite);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    height: 355px/*330px*/;
+    padding: 15px;
+}
+.main .overlay{
+	width:65%;
+}
+.main .container{
+	color: var(--mainWhite);
+    height: 100%;
+}
+.main .container .main-text{
+	padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.main .container .main-text .main-text-p{
+    font-size: 34px;
+    line-height: 44px;
+    color: var(--darkWhite)
+}
+.main .container .main-text .parallelogram .paral-p{
+    font-size: 16px;
+    line-height: 29px;
+    color: var(--darkWhite);
+    font-weight: 100;
+}
+.uhijiujhk{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--mainOrange);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--mainOrange);
+    width: 300px;
+    padding: 0 0 0 10px;
+    margin-top: 20px;
+}
+.main-text .parallelogram input{
+   padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--mainOrange);
+    width: 100%;
+}
+.main-text .parallelogram  input::placeholder{
+    color: #d6d6d6;
+}
+.main-text .parallelogram  input:focus-within{
+    outline: none;
+}
+.main-text .parallelogram button{
+    margin-left: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #f5b238;
+    color: #e8e8e8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .35s ease-in-out;
+}
+/*--------HOW E-GRANTCONNECT WORKS/ABOUT E-GRANTCONNECT---------*/
+.how-it-works,.how-it-works-p{
+    padding:0 50px 50px;
+    background-color: var(--mainWhite);
+    color: var(--mainBlue);
+}
+.how-it-works-p{
+    padding: 50px;
+    flex-direction: row-reverse;
+}
+.how-it-works .acc-container,.how-it-works-p .acc-container{
+    width: 55%;
+    color: #3d4251;
+    line-height: 24px;
+    align-items: flex-start;
+}
+.how-it-works .acc-container h2,.how-it-works-p .acc-container h2{
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-transform: capitalize;
+    /*font-family: Lato,sans-serif;*/
+}
+.ffhf{
+    width: 45%;
+    margin-right: 20px;
+}
+.how-it-works .acc-container button,.how-it-works-p .acc-container button{
+    margin-top: 25px;
+    border: none;
+    padding: 10px;
+    width: 140px;
+    background-color: #2f537f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/*---------------LATEST AND TOTAL MEMBERS------------*/
+.latest-members{
+    padding: 50px 20px;
+    background-color: #305d82;
+    background-image: linear-gradient(268deg,#305d82,#2d4b7b);
+    color: var(--mainWhite);
+}
+.members-container{
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+    margin: 55px 0 30px;
+}
+.ecfjerioer{
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 15px;
+    width: 600px;
+    margin: 0 10px;
+    height: 130px;
+}
+.num{
+    position: relative;
+    top: -26px;
+    left: 7px;
+    height: 32px;
+    padding: 4px 5px 5px;
+    width: 32px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    font-weight: 700;
+    color: #2e527e;
+}
+.l2o{
+    margin-top: -18px;
+}
+
+/*---------------TESTIMONIALS AND PAYMENTS-----------------*/
+.testimonials{
+    padding: 50px;
+    background-color: #305d82;
+    background-image: linear-gradient(268deg,#305d82,#2d4b7b);
+    color: var(--mainWhite);
+    width: 100%;
+}
+.testimonials .testimonials-container{
+    align-items: flex-start;
+    margin-top: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling:touch;
+    width: 100%;
+}
+.testimonials .testimonials-container::-webkit-scrollbar{
+    height: 7px;
+}
+.testimonials .testimonials-container::-webkit-scrollbar-thumb{
+    background: var(--mainWhite);
+    border-radius: 10px;
+}
+.testimonials .testimonials-container::-webkit-scrollbar-track{
+    background: transparent;
+}
+.testimonials .testimonials-container .testi{
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    margin: 0px 30px 20px;
+    padding: 20px;
+    background-color: var(--mainWhite);
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    width: 310px;
+    flex-shrink: 0;
+    color: var(--mainBlue);
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.5s;
+    position: relative;
+    box-shadow: 0px 3px 20px 3px rgb(0 0 0 / 0.1);
+}
+.testimonials .testimonials-container .testi .quotes{
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+.fa-quote-left{
+    margin-right: 20px;
+}
+.fa-quote-right{
+    margin-left: 20px;
+}
+.clients{
+    font-size: 16px;
+}
+.clients .name{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/*-----------CONTACT-------------*/
+.contact{
+    padding: 50px;
+    flex-direction: row-reverse;
+    background-color: var(--veryLightBlue);
+    color: var(--mainBlue);
+    justify-content: center;
+}
+.contact img{
+    width: 40%;
+}
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.contact-info{
+    padding: 7px 0 0;
+    font-size: 20px;
+}
+.contact-info span,.contact-info a{
+    color: #454b69;
+}
+.contact-info a{
+    transition: .5s ease-in-out;
+}
+.contact-info a:hover{
+     color: var(--mainOrange);
+}
+
+/*--------FOOTER---------*/
+.footer{
+    padding:20px;
+    text-align: center;
+    background-color: var(--mainBlue);
+    color: var(--mainWhite);
+}
+.footer .footer-wrapper{
+    font-size: 18px;
+}
+.footer .footer-wrapper .footer-links{
+    padding: 20px 0;
+}
+.footer .footer-wrapper .footer-links a{
+    margin: 0 10px;
+     color: var(--mainWhite);
+     transition: .3s ease-in-out;
+     font-size: 15px;
+}
+.footer .footer-wrapper a:hover{
+     color: var(--mainOrange);
+}
+
+/*---------------------LOGIN PAGE and sign up page-------------*/
+.login-wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--mainBlue)
+}
+.modal{
+    z-index: 1;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.login-page-container,.signup-page-container{
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+.login-page-container{
+     margin:0;
+}
+.login-page,.signup-page{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--mainBlue);
+    background-color: var(--mainWhite);
+    padding:30px 20px;
+    box-shadow: 0px 2px 8px 0px rgb(17 17 17 / .7);
+}
+.login-page h2,.signup-page h2{
+    margin: 0 0 15px;
+}
+.login-page form,.signup-page form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.login-page form .container,.signup-page form .container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 16px;
+    width: 100%
+}
+.login-page form .container input,.signup-page form .container input{
+    width: 100%;
+    padding: 8px 17px;
+    color: var(--mainBlue);
+    border: 1px solid var(--mainBlue);
+    border-radius: 20px;
+    background: transparent;
+}
+.login-page form button,.signup-page form button{
+    margin: 10px 0px 16px;
+    background: var(--mainBlue);
+    padding: 8px 0px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0px 2px 4px 0px rgb(115 115 115 / 70%);
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%
+}
+.login-page form .container1,.signup-page form .container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-page form .container1 span,.signup-page form .container1 span{
+    font-size: 15px;
+    padding: 5px 0px 0px;
+    text-align: center;
+}
+.login-page form .container1 span a,.signup-page form .container1 span a{
+    color: var(--mainOrange);
+    text-decoration: underline;
+}
+
+/*--------------FACULTY----------*/
+.faculty{
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+.faculty-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.86);
+}
+.faculty-nav .ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 10px 30px;
+    width: 70%;
+    background-color: #f9f9f9;
+    height: 100%
+}
+.div-ul{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-around;
+    position: relative;
+    left: 0;
+}
+.faculty-nav .ul li{
+    width: 100%;
+    margin: 14px 0;
+    transition: .5s ease-in-out;
+}
+.faculty-nav .ul li a{
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .5s ease-in-out;
+}
+.div-ul li ul{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 400px;
+    top: 0;
+}
+.div-ul li ul li{
+    padding: 15px 10px;
+    transition: ease-in 0.5s;
+}
+.faculty-nav .ul li:hover ul{
+    display: flex;
+    transition: ease-in 0.5s;
+}
+
+
+/*--------RESPONSIVENESS---------*/
+@media only screen and (max-width: 900px){
+     h2{line-height: 32px;}
+    #open-btn{display: block;}
+    .header-text .nav .navigation ul li {margin: 30px 0;}
+    .navigation{background-color: var(--mainBlue);background-image: linear-gradient(268deg,#305d82,#2d4b7b); position: absolute;top:85px;right:0px;z-index: 5;width: 0;height: 0;transition:width .5s ease-in-out, .5s ease-in-out;visibility: hidden;}
+    .header-text .nav .navigation ul{flex-direction: column;}
+    .main .container .main-text .main-text-p{font-size: 33px}
+    .main .container .main-text .parallelogram .paral-p {font-size: 15px;}
+}
+@media only screen and (max-width: 880px){
+    .members-container{flex-direction: column;margin: 28px 0;}
+    .ecfjerioer{margin: 18px 0;height: 100px;width: 100%;}
+}
+@media only screen and (max-width: 830px){
+    .header{height: 300px;clip-path: none;}
+    .main{height: 100%;}
+    .main .overlay{width: 75%;}
+    .main .container .main-text{padding: 0}
+
+    .how-it-works{padding: 50px;flex-direction: column-reverse;}
+    .how-it-works-p{flex-direction: column;}
+    .ffhf {width: 55%;margin: 20px 0;}
+    .how-it-works .acc-container,.how-it-works-p .acc-container{width: 100%;}
+
+    .testimonials {padding: 50px 10px;}
+    .testimonials .testimonials-container .testi{width: 220px;padding: 20px 10px;margin: 20px 10px 50px;}
+    .testimonials .testimonials-container .testi .quotes {font-size: 15px;}
+    .clients {font-size: 14px;}
+    .clients .name {font-size: 15px;}
+
+    .contact {flex-direction: column;align-items: center;padding: 30px 10px;}
+    .contact img {width: 50%;}
+    .contact-container{align-items: center;width: 100%;text-align: center;margin-top: 20px;}
+
+    .login-page,.signup-page{width: 70%;}
+
+    .faculty-nav .ul{width: 90%}
+}
+@media only screen and (max-width: 768px){
+    h1{text-align: center;}
+    .how-it-works .acc-container h2, .how-it-works-p .acc-container h2 {font-size: 29px;margin-bottom: 10px;}
+    .main .overlay{display: none;}
+    .main .container .main-text{align-items: center;}
+    .parallelogram{display: flex;flex-direction: column;align-items: center;}
+    .main .container .main-text .parallelogram .paral-p{text-align: center;}
+    .ffhf {width: 80%;}
+
+    .div-ul li ul{left: 350px;}
+}
+@media only screen and (max-width: 600px){
+     .how-it-works,.how-it-works-p{padding: 50px 15px}
+     .ffhf {width: 100%;}
+     .faculty-nav .ul{width: 100%}
+}
+@media only screen and (max-width: 600px){
+    .div-ul li ul{    left: 300px;}
+}
+@media only screen and (max-width: 470px){
+    .ecfjerioer{height: 120px;}
+    .testimonials .testimonials-container .testi .quotes {font-size: 16px;}
+    .clients {font-size: 13px;}
+    .clients .name {font-size: 14px;}
+
+    .contact-info {font-size: 16px;}
+
+    .modal{background-color: var(--mainWhite);padding: 0px 0px 80px;}
+    .login-page-container, .signup-page-container {margin:0px;}
+    .login-page,.signup-page{width: 95%;padding: 30px 0px;box-shadow: none;}
+}
+@media only screen and (max-width: 370px){
+    .header {height: 370px;}
+    .header-text{height: 70px;}
+    .header-text .e-grant {font-size: 20px;letter-spacing: 1px;margin-left: 0;}
+    #open-btn, #close-btn{font-size: 24px}
+    .ecfjerioer{height: 145px;}
+}
+@media only screen and (max-width: 320px){
+    .uhijiujhk{padding: 0 0 0 5px;width: 265px;}
+    .main-text .parallelogram input{padding: 5px;}
+}
+
+
+
+            /*-----CSS FOR PROFILE PAGE,MY ACCOUNT PAGE-----*/
+.fa-home,.fa-sign-out-alt,.fa-bell,.fa-user,.fa-envelope,.fa-volume-up,.fa-video,.fa-book,.fa-pencil-alt{
+    margin-right: 12px;
+ }
+.h1h{
+    color: #af48b1
+}
+ .navi ul{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    margin: 10px 0 0;
+ }
+.navi ul li {
+   padding: 10px;
+    margin: 10px 10px 10px 0;
+    width: 97.5%;
+    /*text-align: center;*/
+}
+.active-p{
+    border-radius: 0 10px 10px 0;
+    box-shadow: inset -7px 0px 5px 3px #00000038;
+    background-color: var(--mainWhite);
+    color: #af48b1;
+}
+.navi ul li .a,.active-p-a{
+    color: var(--mainWhite);
+    font-size: 20px;
+    padding: 0 15px;
+}
+.active-p-a{
+    color: #af48b1;
+}
+.navi{
+    background-color: #af48b1;
+    position: fixed;
+    top:4.7rem;
+    right:0px;
+    z-index: 5;
+    width: 18%;
+    height: 100vh;
+}
+.user-img{
+   width: 83px;
+    margin-right: 15px;
+}
+.user-img img{
+    border-radius: 50%;
+}
+.profile{
+    background-color: #af48b1;
+    color: var(--mainWhite);
+    padding: 25px 10px;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    height: 6rem;
+    width: 100%;
+    box-shadow: 0px 2px 3px 3px #00000017;
+}
+#open-btn-p,#close-btn-p{
+    font-size: 30px;
+    color: var(--mainWhite);
+    cursor: pointer;
+    display: none;
+}
+.profile-wrapper{
+    width: 82%;
+    background-color: var(--mainBlue);
+}
+.profile-container{
+    /*margin-top:80px;*/
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--mainWhite);
+}
+.fa-pencil-alt{
+    margin-left: 12px;
+ }
+.divs{
+    padding: 0 20px 20px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ .account{
+    height: 100vh;
+ }
+ .account-name{
+    display: flex;
+    align-items: center;
+ }
+ .account{
+    flex-direction: column;
+    justify-content: center;
+}
+ .account-container{
+    padding: 20px 0;
+    color: #af48b1;
+    width: 60%;
+}
+ .account-container p{
+    padding: 10px;
+    margin: 10px 0 0 ;
+    border: 1px solid;
+    border-radius: 10px 10px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.account-container p a{
+    color: #af48b1;
+}
+
+@media only screen and (max-width: 1024px){
+   .account-container{width: 100%;}
+}
+@media only screen and (max-width: 850px){
+    #dashboard-nav{visibility: hidden;width: 0;transition: width .5s ease-in-out, .5s ease-in-out;}
+    #open-btn-p{display: block;}
+    .profile-wrapper {width: 100%;}
+   .profile {justify-content: space-between; flex-direction: row-reverse;}
+}
+@media only screen and (max-width: 480px){
+    .h1h{font-size: 28px;}
+}
+@media only screen and (max-width: 350px){
+    .h1h{font-size: 26px;}
+    .account-name h3{font-size: 16px}
+    .account-name p{font-size: 15px}
+    #open-btn-p, #close-btn-p {font-size: 25px;}
+    .navi {top: 78px;}
+}
